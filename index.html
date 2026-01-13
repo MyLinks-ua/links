@@ -17,7 +17,7 @@
 
 body {
     min-height: 100vh;
-    /* Тёмный фон с переливом */
+    /* Тёмный фон с переливом черный → темно-серый → светло-серый → темно-серый → черный */
     background: linear-gradient(180deg, #000000, #1a1a1a, #444444, #1a1a1a, #000000);
     background-size: 100% 500%;
     animation: verticalFlow 35s linear infinite;
@@ -33,31 +33,31 @@ body {
 }
 
 .container {
-    width: 95%;          /* почти весь экран */
-    max-width: 280px;    /* ограничение для больших экранов */
+    width: 90%;
+    max-width: 340px;
     background: rgba(25,25,25,0.9);
-    border-radius: 20px;
-    padding: 40px 10px 20px 10px;
+    border-radius: 25px;
+    padding: 50px 15px 25px 15px;
     text-align: center;
-    box-shadow: 0 0 50px rgba(255,255,255,0.1);
+    box-shadow: 0 0 60px rgba(255,255,255,0.1);
     position: relative;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 1.2s ease;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 🔵 Аватарка */
+/* 🔵 Аватарка сверху */
 .avatar {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: linear-gradient(135deg, #555, #888);
-    margin: -45px auto 10px;
-    border: 2px solid #fff;
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    margin: -60px auto 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
     overflow: hidden;
 }
 
@@ -68,40 +68,40 @@ body {
     border-radius: 50%;
 }
 
-/* ✨ Заголовок */
+/* ✨ Гриф/Glow для заголовка */
 h1 {
-    font-size: 20px;
-    margin-bottom: 6px;
+    font-size: 22px;
+    margin-bottom: 8px;
     background: linear-gradient(45deg, #f39c12, #e74c3c, #8e44ad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 8px rgba(243,156,18,0.8),
-                 0 0 15px rgba(231,76,60,0.6),
-                 0 0 20px rgba(142,68,173,0.4);
+    text-shadow: 0 0 10px rgba(243,156,18,0.8),
+                 0 0 18px rgba(231,76,60,0.6),
+                 0 0 25px rgba(142,68,173,0.4);
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;
     color: #ccc;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* Кнопки */
 .link {
     display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 12px;
     text-decoration: none;
     color: #fff;
     background: linear-gradient(135deg, #2a2a2a, #3b3b3b);
     border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 0 12px rgba(255,255,255,0.08);
+    box-shadow: 0 0 15px rgba(255,255,255,0.08);
     transition: 0.3s;
     position: relative;
     overflow: hidden;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .link::before {
@@ -122,34 +122,34 @@ p {
 
 .link:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+    box-shadow: 0 0 35px rgba(255,255,255,0.25);
 }
 
 .footer {
-    margin-top: 12px;
-    font-size: 9px;
+    margin-top: 15px;
+    font-size: 10px;
     color: #aaa;
 }
 
-/* Адаптивные улучшения для очень маленьких экранов */
-@media screen and (max-width: 280px) {
+/* Адаптив для маленьких экранов */
+@media screen and (max-width: 320px) {
     .container {
-        padding: 35px 8px 15px 8px;
+        padding: 40px 10px 20px 10px;
     }
     h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
     p {
-        font-size: 10px;
+        font-size: 11px;
     }
     .link {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 13px;
+        padding: 10px;
     }
     .avatar {
-        width: 65px;
-        height: 65px;
-        margin: -40px auto 8px;
+        width: 80px;
+        height: 80px;
+        margin: -55px auto 12px;
     }
 }
 </style>
@@ -159,7 +159,7 @@ p {
 
 <div class="container">
 
-    <!-- Аватарка -->
+    <!-- 🔵 Аватарка -->
     <div class="avatar">
         <img src="https://i.pinimg.com/736x/6b/3d/ae/6b3dae3c4c0eddc2c5a2848f44272993.jpg" alt="Аватар">
     </div>
