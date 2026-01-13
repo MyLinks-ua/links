@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мои ссылки</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1c1c1c, #2e2e2e, #4a4a4a, #2e2e2e, #1c1c1c);
+    background-size: 100% 500%;
+    animation: verticalFlow 30s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@keyframes verticalFlow {
+    0% { background-position: top; }
+    100% { background-position: bottom; }
+}
+
+.container {
+    width: 360px;
+    background: rgba(25,25,25,0.95);
+    border-radius: 25px;
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(255,255,255,0.1);
+    position: relative;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔵 Аватарка сверху */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #777, #aaa);
+    margin: -80px auto 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ✨ Гриф/Glow для заголовка */
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #f39c12, #e74c3c, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(243,156,18,0.8),
+                 0 0 22px rgba(231,76,60,0.6),
+                 0 0 32px rgba(142,68,173,0.4);
+}
+
+p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Кнопки */
+.link {
+    display: block;
+    margin: 15px 0;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #2a2a2a, #3b3b3b);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 18px rgba(255,255,255,0.08);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.link:hover::before {
+    opacity: 1;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255,255,255,0.25);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 🔵 Аватарка -->
+    <div class="avatar">
+        <img src="https://i.pinimg.com/736x/6b/3d/ae/6b3dae3c4c0eddc2c5a2848f44272993.jpg" alt="Аватар">
+    </div>
+
+    <!-- НОВЫЙ ЗАГОЛОВОК -->
+    <h1>Мои ссылки</h1>
+    <p>Смотри видео, пиши в Telegram, вступай в группу трейдеров</p>
+
+    <!-- КНОПКИ -->
+    <a href="https://i.pinimg.com/736x/6b/3d/ae/6b3dae3c4c0eddc2c5a2848f44272993.jpg" class="link" target="_blank">🎬 Смотреть мои видео в TikTok</a>
+    <a href="https://t.me/vladik_kys" class="link" target="_blank">💬 Написать мне в Telegram</a>
+    <a href="https://t.me/+QoG0H7aErJFjY2Fi" class="link" target="_blank">📈 Вступить в группу трейдеров</a>
+
+    <div class="footer">© 2026 Trading Links</div>
+
+</div>
+
+</body>
+</html>
